@@ -13,7 +13,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: ['babel-loader', 'source-map-loader'],
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.tsx?$/,
@@ -44,6 +44,12 @@ module.exports = {
         loaders: [
           'file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]',
           'image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false',
+        ],
+      },
+      {
+        test: /\.(ttf|eot)$/i,
+        loaders: [
+          'file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]'
         ],
       },
     ],

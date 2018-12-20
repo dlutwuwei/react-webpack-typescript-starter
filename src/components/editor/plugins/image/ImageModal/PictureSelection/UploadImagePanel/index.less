@@ -1,0 +1,243 @@
+// drag时的样式，
+li.image-item {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 113px;
+  height: 113px;
+  margin-right: 10px;
+  margin-left: 8px;
+  margin-bottom: 17px;
+  font-size: 12px;
+  z-index: 10000;  // 保证sortableHelper不会在modal里消失
+  img {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover {
+      cursor: move;
+    }
+  }
+  .syl-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .error {
+    display: none;
+  }
+  .success {
+    display: none;
+  }
+  .file-panel {
+    display: none;
+  }
+}
+
+
+.upload-image-panel {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-top: -10px;
+  .upload-image-tips {
+    height: 20px;
+    a {
+      font-size: 14px;
+      float: right;
+      display: inline-block;
+    }
+  }
+  .dnd {
+    padding: 100px 0;
+    .icon {
+      height: 55px;
+      margin-bottom: 20px;
+      background: url('../icon/insertPhoto_new.png') no-repeat;
+      background-position: center;
+    }
+    button {
+      display: block;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 14px;
+      text-align: center;
+      color: #999999;
+    }
+  }
+  ul.image-list {
+    height: 380px;
+    overflow: auto;
+    margin: 10px 0;
+  }
+  li.image-item {
+    display: inline-block;
+    position: relative;
+    background: #eee;
+    overflow: hidden;
+    width: 113px;
+    height: 113px;
+    margin-right: 3px;
+    margin-bottom: 17px;
+    font-size: 12px;
+    z-index: 10000;  // 保证sortableHelper不会在modal里消失
+    img {
+      width: 100%;
+      &:hover {
+        cursor: move;
+      }
+    }
+    .syl-progress {
+      display: initial;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .error {
+      display: initial;
+      background: #f43838;
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      width: 100%;
+      z-index: 100;
+    }
+    .success {
+      display: initial;
+      background: url('../icon/red_success.png');
+      background-repeat: no-repeat;
+      background-position: right;
+      background-size: 40px 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 40px;
+      line-height: 28px;
+      width: 100%;
+      z-index: 100;
+    }
+    .file-panel {
+      display: initial;
+      position: absolute;
+      height: 0;
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#80000000', endColorstr='#80000000');
+      background: rgba(0,0,0,.5);
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 300;
+      transition: all 0.3s ease-in-out;
+      .delete {
+        width: 20px;
+        height: 20px;
+        float: right;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url('../icon/vote_delete.png') no-repeat;
+        background-size: auto;
+        margin: 5px 1px;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+          background: url('../icon/delete_white.png') no-repeat;
+          background-size: 15px 15px;
+        }
+      }
+    }
+  }
+  li.image-item-upload {
+    display: inline-block;
+    box-sizing: border-box;
+    top: 0px;
+    left: 0px;
+    width: 113px;
+    height: 113px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    margin-left: 8px;
+    margin-bottom: 17px;
+    overflow: hidden;
+    bottom: auto;
+    right: auto;
+    text-align: center;
+    line-height: 111px;
+   /*  background: url('../../icon/insertPhoto_new.png') no-repeat;
+    background-size: auto;
+    background-position: center; */
+    cursor: pointer;
+    i {
+      color: #e8e8e8;
+      font-size: 20px;
+    }
+  }
+  .confirm {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    label {
+      left: 0;
+      top: 10px;
+      position: absolute;
+    }
+    button {
+      margin: 0 10px;
+    }
+  }
+  .recommend {
+    min-width: 150px;
+    .recommend-controller {
+      height: 30px;
+      border-bottom: 1px solid #e8e8e8;
+      .recommend-tip {
+        background: url('../icon/icBoon.png') no-repeat;
+        a {
+          margin-left: 25px;
+          vertical-align: text-top;
+        }
+      }
+      p {
+        float: left;
+        font-size: 14px;
+        color: #999999;
+      }
+      div.jump {
+        font-size: 14px;
+        color: #5990f2;
+        float: right;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          color: rgb(248, 89, 89);
+        }
+      }
+    }
+    .recommend-wrapper {
+      margin-top: 20px;
+      overflow-y: hidden;
+      overflow-x: auto;
+      height: 120px;
+      ul {
+        height: 110px;
+        li {
+          display: inline-block;
+          margin-right: 20px;
+          img {
+            cursor: pointer;
+            height: 100px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+

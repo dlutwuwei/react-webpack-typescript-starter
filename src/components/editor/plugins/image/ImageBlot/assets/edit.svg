@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 29@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="26" height="26"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-64.000000, -22.000000)">
+            <g id="编辑图片-未hover" transform="translate(64.000000, 22.000000)">
+                <g id="Rectangle-29" opacity="0">
+                    <use fill="#D8D8D8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#979797" stroke-width="1" x="0.5" y="0.5" width="25" height="25"></rect>
+                </g>
+                <g id="Group-33" transform="translate(3.000000, 4.000000)">
+                    <path d="M19,8.32714844 L19,16 C19,17.1045695 18.1045695,18 17,18 L2,18 C0.8954305,18 0,17.1045695 0,16 L0,3 C0,1.8954305 0.8954305,1 2,1 L12.1616211,1" id="Rectangle" stroke="#979797" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <rect id="Rectangle-24" fill="#979797" transform="translate(13.441743, 6.441743) rotate(45.000000) translate(-13.441743, -6.441743) " x="12.6917428" y="-1.91825722" width="1.5" height="16.72" rx="0.75"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
